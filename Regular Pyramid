@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+//Compiler version g++ 6.3.0
+
+int main()
+{
+   int i,  j, rows;
+   
+   
+  cout<<"Enter the number of rows "<<endl;
+  cin>>rows;
+   cout << "Your Reverse Half Pyramid is Ready :😍😍"<<endl;
+   
+   for(int i = 1; i<=rows; i++){
+     for(int j = rows; j >=i; j--){
+       cout<< " * ";
+      }
+      cout << endl;
+      
+}
+cout <<endl;
+}
