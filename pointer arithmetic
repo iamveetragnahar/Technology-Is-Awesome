@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+
+  int arr[5] = {1, 2, 3, 4, 5};
+  int *p = arr;
+  int *a = &arr[2];
+  int *b = &arr[4];
+  int i;
+  
+/*----------------------------------------------------------------------------*/
+  printf("Array Elements: (using increment operator) \n");
+  
+  for (i = 0; i < 5; i++){
+    printf("arr[%d] = %d \n", i, *(p++));
+  }
+/*----------------------------------------------------------------------------*/
+  printf("\nArray Elements: (using decrement operator) \n");
+  
+  for (i = 5; i > 0 ; i--){
+    printf("arr[%d] = %d \n", i, *(--p));
+  }
+/*----------------------------------------------------------------------------*/
+  printf("\nArray Elements: (using addition operator) \n");
+  
+  for (i = 0; i < 5; i++){
+    printf("arr[%d] = %d \n", i, *(p + i));
+  }
+/*----------------------------------------------------------------------------*/
+  printf("\nArray Elements: (using subtraction operator) \n");
+  
+  for (i = 0; i > -5 ; i--){
+    printf("arr[%d] = %d \n", -i, *(p - i));
+  }
+/*----------------------------------------------------------------------------*/
+  // It is important to note that pointer comparison only makes sense if the two pointers being compared are pointing to members of the same array.
+
+  printf("\nPointer Comparison: \n");
+  printf("a <= b = %d\n", a <= b);
+  printf("a >= b = %d\n", a >= b);
+  printf("a == b = %d\n", a == b);
+/*----------------------------------------------------------------------------*/
+  return 0;
+}
